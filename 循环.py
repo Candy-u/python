@@ -34,6 +34,6 @@ print(ss)
 
 
 
-
-
+#break退出循环
+#continue继续循环
 #
