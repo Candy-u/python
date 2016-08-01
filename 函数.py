@@ -64,6 +64,24 @@ print(sum(10,10))
 
 
 
+#高阶函数
+
+#能接收函数作参数的函数就是高阶函数
+
+
+def add(x,y,f):
+    return f(x)+f(y)
+
+print(add(3,-4,abs))
+
+
+
+
+#python 内置的高阶函数 map()  reduce()  filter() sorted()
+
+
+
+
 
 
 
