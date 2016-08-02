@@ -24,7 +24,7 @@ f2=count()
 
 
 #装饰器   decorator
-
+#Python的 decorator 本质上就是一个高阶函数，它接收一个函数作为参数，然后，返回一个新函数。
 #可以极大的简化代码，避免函数编写重复性代码
 
 #打印日志   @log
@@ -37,7 +37,7 @@ f2=count()
 #
 # def new_fn(f):
 #     def fn(x):
-#         # print('call' + f._name_ +'()')
+#         # print('call' + f.__name__ +'()')
 #         return f(x)
 #     return fn
 
@@ -49,30 +49,57 @@ f2=count()
 #简化版
 def new_fn(f):
     def fn(x):
-        # print('call' + f._name_ +'()')
+        # print('call' + f.__name__ +'()')
+        print(f.__name__)
         return f(x)
     return fn
 
 @new_fn
 def f1(x):
     return x*2
-
-print(f1(5))
-
+# print(f1(5))
 
 
+#无参数decorator
+
+def log(f):
+    def fn(x):
+        print('call  ' + f.__name__ +'()...')
+        return f(x)
+    return fn
+
+# @log
+# def factorial(n):
+#     return n*n+1
+#
+# print(factorial(10))
+
+#报错
+# @log
+# def add(x,y):
+#     return x+y
+# print(add(1,2))
+
+#正确写法
+
+def log(f):
+    def fn(*args,**kw):
+        print('call  ' + f.__name__ +'()...')
+        return f(*args,**kw)
+    return fn
+
+@log
+def add(x,y):
+    return x+y
+print(add(1,2))
 
 
+#这两个是python中的可变参数。*args表示任何多个无名参数，它是一个tuple；**kwargs表示关键字参数，它是一个dict。并且同时使用*args和**kwargs时，必须*args参数列要在**kwargs前
 
 
+import time
 
-
-
-
-
-
-
-
-
+t=time.time()
+print(t)
 
 #
