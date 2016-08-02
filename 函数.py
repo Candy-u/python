@@ -80,7 +80,10 @@ print(add(3,-4,abs))
 #python 内置的高阶函数 map()  reduce()  filter() sorted()
 
 
+#python 内置函数详解
 
+
+#http://www.cnblogs.com/wang-yc/p/5635765.html
 
 
 
