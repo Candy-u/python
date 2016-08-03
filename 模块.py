@@ -7,18 +7,35 @@
 #我们以内建的sys模块为例，编写一个hello的模块：(我们也可以自定义一个模块去导入)
 
 
-import sys  #导入模块
+# import sys  #导入模块
 #sys模块有一个argv变量，用list存储了命令行的所有参数。argv至少有一个元素，因为第一个参数永远是该.py文件的名称
-def test():
-    args=sys.argv
-    if len(args)==1:
-        print('hello world!')
-    elif len(args)==2:
-        print('hello,%s' % args[1])
-    else:
-        print('too many arguments!')
+# def test():
+#     args=sys.argv
+#     if len(args)==1:
+#         print('hello world!')
+#     elif len(args)==2:
+#         print('hello,%s' % args[1])
+#     else:
+#         print('too many arguments!')
 
-test()
+# test()
+# 把图片生成缩略图
+from PIL import Image
+im=Image.open('2.jpg')
+# print(im.format,im.size,im.mode)
+im.thumbnail((100,100))
+im.save("thumb.jpg",'JPEG')
+print(im.format,im.size,im.mode)
+
+
+
+
+
+
+
+
+
+
 
 
 #作用域
