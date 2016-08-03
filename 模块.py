@@ -30,15 +30,21 @@ print(im.format,im.size,im.mode)
 
 
 
+#From…import 语句
+#Python的from语句让你从模块中导入一个指定的部分到当前命名空间中。
+
+#from modname import name1[, name2[, ... nameN]]
+
+#From…import* 语句
+
+# 把一个模块的所有内容全都导入到当前的命名空间也是可行的，只需使用如下声明：
+
+#from modname import *
 
 
 
 
 
-
-
-
-#作用域
 
 
 
