@@ -20,10 +20,31 @@ print(n[-1])#倒数第一个
 n.append('Nana')
 n.insert(0,334)
 print(n)
+
+#添加一个集合
+#extend()
+
+# n.extend([3,33])
+
 #删除
 #pop()默认从最后一个开始删除  还可以接受一个索引参数，删除第几个
 n.pop(2)
 #替换  通过索引赋值，相当于替换掉原来的元素
+
+# 在列表中查找列表
+
+
+my_list=['Michael','Terry',[1989,'what']]
+
+for i in my_list:
+    if isinstance(i,list):
+        for j in i:
+            print(j)
+    else:
+        print(i)
+
+# isinstance  检查某个特定标识符是否包含某个特定类型的数据
+
 
 
 
