@@ -88,6 +88,29 @@ print(add(3,-4,abs))
 
 
 
+# 递归
+
+#以处理多层嵌套的列表数据为例
+
+def print_lol(this_list):
+    for i in this_list:
+        if isinstance(i,list):
+            print_lol(i)
+        else:
+            print(i)
+
+my_list=['Marry','20',['name','address',['Lucy','40']]]
+
+print_lol(my_list)
+
+#如果一个函数在内部调用自身本身，这个函数就是递归函数。
+
+
+
+
+
+
+
 
 
 #
