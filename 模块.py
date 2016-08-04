@@ -25,22 +25,31 @@ im=Image.open('2.jpg')
 # print(im.format,im.size,im.mode)
 im.thumbnail((100,100))
 im.save("thumb.jpg",'JPEG')
-print(im.format,im.size,im.mode)
+# print(im.format,im.size,im.mode)
 
 
 
 
-#From…import 语句
-#Python的from语句让你从模块中导入一个指定的部分到当前命名空间中。
+"""From…import 语句
+Python的from语句让你从模块中导入一个指定的部分到当前命名空间中。
 
-#from modname import name1[, name2[, ... nameN]]
+from modname import name1[, name2[, ... nameN]]
 
-#From…import* 语句
+From…import* 语句
 
-# 把一个模块的所有内容全都导入到当前的命名空间也是可行的，只需使用如下声明：
+把一个模块的所有内容全都导入到当前的命名空间也是可行的，只需使用如下声明：
 
-#from modname import *
+from modname import *  """
 
+
+#自己的模块
+#以递归函数为例  nester.py
+# 引入模块
+
+import nester
+
+my_list=['Marry','20',['name','address',['Lucy','40']]]
+nester.print_lol(my_list)
 
 
 
