@@ -14,8 +14,28 @@
 #input函数
 # 从标准输入读取一个行，并返回一个字符串
 
-str=input("请输入。。。")
-print("你输入的内容："+str)
+# str=input("请输入。。。")
+# print("你输入的内容："+str)
+
+
+
+# 打开和关闭文件
+#open() 打开
+
+the_file=open('test.txt')
+print(the_file.name)  #文件名
+print(the_file.closed)  #文件是否关闭
+print(the_file.mode)  #文件访问模式，默认为R（只读模式）
+
+
+#close()
+
+
+
+
+
+
+
 
 
 
