@@ -22,27 +22,35 @@
 # 打开和关闭文件
 #open() 打开
 
-the_file=open('test.txt')
-print(the_file.name)  #文件名
-print(the_file.closed)  #文件是否关闭
-print(the_file.mode)  #文件访问模式，默认为R（只读模式）
+# the_file=open('test.txt')
+# print(the_file.name)  #文件名
+# print(the_file.closed)  #文件是否关闭
+# print(the_file.mode)  #文件访问模式，默认为R（只读模式）
 
 
 #close()
 
+# the_file.close()
 
 
 
+#os模块    (操作文件和目录)
+#引入模块
+import os
 
+print(os.name)   # 操作系统类型
 
+#查看当前目录的绝对目录
+print(os.path.abspath('.'))
 
+# 在某个目录下创建一个新目录，首先把新目录的完整路径表示出来:
+os.path.join('/mygit/python','testdir')
 
+#然后创建一个目录
+os.mkdir('/mygit/python/testdir')
 
-
-
-
-
-
+#删掉目录
+os.rmkdir('/mygit/python/testdir')
 
 
 
