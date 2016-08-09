@@ -44,16 +44,30 @@ print(os.name)   # 操作系统类型
 print(os.path.abspath('.'))
 
 # 在某个目录下创建一个新目录，首先把新目录的完整路径表示出来:
-os.path.join('/mygit/python','testdir')
+# os.path.join('/mygit/python','testdir')
 
 #然后创建一个目录
-os.mkdir('/mygit/python/testdir')
+# os.mkdir('/mygit/python/testdir')
 
 #删掉目录
-os.rmkdir('/mygit/python/testdir')
+# os.rmdir('/mygit/python/testdir')
 
 
 
+#StringIO和BytesIO
 
+#StringIO
+#很多时候，数据读写不一定是文件，也可以在内存中读写。
+#StringIO顾名思义就是在内存中读写str。
 
+from io import StringIO
+
+f=StringIO()
+print(f.write('hello'))  #5
+f.write(',')
+f.write('world !')
+
+print(f.getvalue())
+
+#getvalue()方法用于获得写入后的str。
 #
