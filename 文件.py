@@ -26,7 +26,7 @@ the_file=open('test.txt')
 print(the_file.name)  #文件名
 print(the_file.closed)  #文件是否关闭
 print(the_file.mode)  #文件访问模式，默认为R（只读模式）
-
+print(the_file.readline(),end='')  #获取一行数据 
 
 #close()
 
