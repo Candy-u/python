@@ -27,16 +27,57 @@ data=open('sketch.txt')
 #     print(line_spoken,end='')
 #
 # data.close()
+#上述方法解决了数据中有：的报错
+#
+
+#split()方法返回一个字符串列表，会赋值给一个目标标识符 这里根据数据来看 role==Man line_spoken='is this the right..'
+
+# for each_line in data:
+#     if not each_line.find(':')==-1:
+#         (role,line_spoken)=each_line.split(':',1)#额外的参数 控制split如何分解
+#         print(role,end='')
+#         print('  said:',end='')
+#         print(line_spoken,end='')
+
+# data.close()
+#上述方法解决了数据中有一行不是：格式的数据
+#find()方法如果找不到就会返回-1,所以取相反值，如果不是：格式的数据跳过
+
+#这里只是有两个小问题，如果是大量的数据，不乏会有很多问题，这种排除法，显然是不可行的。
+
+
+
+
+
+#处理异常
+
+#python 的异常处理机制允许错误出现，但监视它的发生，然后给你一个机会来恢复，在正常的控制流期间，Python尝试运行你的代码，如果没有任何问题，代码会继续正常执行。在异常控制流期间，Python先尝试运行你的代码，如果发现有问题，就会执行恢复代码，然后继续正常执行你的代码。
+
+
+#try / except 机制
+
+'''
+    try:
+        你的代码(可能导致一个运行时错误)
+    except:
+        错误恢复代码
+'''
 
 
 for each_line in data:
-    if not each_line.find(':')==-1:
-        (role,line_spoken)=each_line.split(':',1)#额外的参数 控制split如何分解
+    try:
+        (role,line_spoken)=each_line.split(':',1)
         print(role,end='')
         print('  said:',end='')
         print(line_spoken,end='')
+    except:
+        pass#如果出一个运行时错误，会执行这个代码
+
+
 
 data.close()
+
+
 
 
 
